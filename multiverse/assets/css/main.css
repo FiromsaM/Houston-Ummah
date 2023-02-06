@@ -1601,6 +1601,7 @@ input, select, textarea {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		/* border: 5px solid red; */
 	}
 
 		#main .thumb {
@@ -1613,6 +1614,8 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+		/* border: 5px solid blue; */
+
 		}
 
 			#main .thumb:after {
@@ -1629,6 +1632,7 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				
 			}
 
 			#main .thumb > .image {
@@ -1642,6 +1646,8 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+		/* border: 5px solid yellow; */
+
 			}
 
 			#main .thumb > h2 {
@@ -1792,6 +1798,80 @@ input, select, textarea {
 				-ms-transition-delay: 2.3s;
 				transition-delay: 2.3s;
 			}
+
+
+/* Thumbnails */
+
+#thumbnails {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 0 0.75em;
+	/* border: 5px solid red; */
+	
+}
+
+	#thumbnails article {
+		position: relative;
+		width: 33.33%;
+		background: #101010;
+		outline: 0;
+		/* border: 5px solid blue; */
+	}
+
+		#thumbnails article .thumbnail {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			display: block;
+			position: relative;
+			border: 0;
+			outline: 0;
+			object-fit: cover;
+			width: 100%;
+			/* border: 5px solid yellow; */
+			
+		}
+
+			#thumbnails article .thumbnail img {
+				display: block; 
+				width: 100%; 
+				/* border: 5px solid red; */
+			}
+
+			#thumbnails article .thumbnail:before {
+				pointer-events: none;
+				-moz-transition: opacity 0.25s ease;
+				-webkit-transition: opacity 0.25s ease;
+				-ms-transition: opacity 0.25s ease;
+				transition: opacity 0.25s ease;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				box-shadow: inset 0 0 0 2px #00D3B7, inset 0 0 0px 3px rgba(0, 0, 0, 0.15);
+				opacity: 0;
+				z-index: 1;
+			}
+
+			#thumbnails article .thumbnail:focus:before {
+				opacity: 0.5;
+			}
+
+		#thumbnails article h2, #thumbnails article p {
+			display: none;
+		}
+
+		#thumbnails article.active .thumbnail:before {
+			opacity: 1;
+		}
+
+
 
 		@media screen and (max-width: 1680px) {
 
