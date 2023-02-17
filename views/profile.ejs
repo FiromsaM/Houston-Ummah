@@ -1,0 +1,55 @@
+<%- include('partials/header') -%>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6">
+            <div>
+                <p>User: <strong><%= user.userName %></strong></p>
+            
+            </div>
+            <div class="mt-5">
+              <h2> <strong> Add a Event</strong></h2>
+              <form action="/event/createEvent" enctype="multipart/form-data" method="POST">
+                <div class="mb-3">
+                  <label class="label">
+                    <span class="label-text">Title</span>
+                  </label>
+                    <input type="text" placeholder="Title" name="title" class="input input-bordered w-full max-w-xs" />
+                </div>
+                <div class="mb-3">
+                  <textarea class="textarea textarea-bordered" placeholder="caption" name="caption"></textarea>
+                 
+                </div>
+                <div class="form-control w-full max-w-xs">
+                  <label for="imgUpload" class="label">
+                    <span class="label-text">Image</span>
+                  </label>
+                  <input type="file" class="file-input file-input-bordered w-full max-w-xs" name="file"/>
+                </div>
+                
+                <button class="btn btn-primary" value="Upload">Submit</button>
+                
+              </form>
+            </div>
+        </div>
+        <div class="col-6">
+            <ul class="card card-compact w-96 bg-base-100 shadow-xl">
+            <% for(var i=0; i<event.length; i++) {%>
+              <li class="col-6 justify-content-between mt-5">
+                <figure>
+                  <a href="/event/<%= event[i]._id%>">
+                    <img class="img-fluid" src="<%= event[i].image%>">
+                  </a>
+                </figure>
+              </li>
+            <% } %>
+            </ul>
+            <div class="row justify-content-center mt-5">
+              <a class="btn btn-primary" href="/feed">Return to Feed</a>
+              <a class="btn btn-primary" href="/logout">Logout</a>
+
+            </div>  
+          </div>  
+        </div>
+      </div>
+    </div>
+<%- include('partials/footer') -%>

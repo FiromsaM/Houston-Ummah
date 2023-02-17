@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="/public/index.html"><strong>Home</strong></a></h1>
+						<h1><a href="/"><strong>Home</strong></a></h1>
 						<nav>
 							<ul>
 								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
@@ -29,56 +29,14 @@
 
 				<!-- Main -->
 					<div id="main">
-						<article class="thumb">
-							<a href="images/fulls/13.jpg" class="image"><img src="images/thumbs/13.jpg" alt="" /></a>
-							<h2>Magna feugiat lorem</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/14.jpg" class="image"><img src="images/thumbs/14.jpg" alt="" /></a>
-							<h2>Nisl adipiscing</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/15.jpg" class="image"><img src="images/thumbs/15.jpg" alt="" /></a>
-							<h2>Tempus aliquam veroeros</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="" /></a>
-							<h2>Aliquam ipsum sed dolore</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/17.jpg" class="image"><img src="images/thumbs/17.jpg" alt="" /></a>
-							<h2>Cursis aliquam nisl</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/18.jpg" class="image"><img src="images/thumbs/18.jpg" alt="" /></a>
-							<h2>Sed consequat phasellus</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/19.jpg" class="image"><img src="images/thumbs/19.jpg" alt="" /></a>
-							<h2>Mauris id tellus arcu</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="" /></a>
-							<h2>Nunc vehicula id nulla</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="" /></a>
-							<h2>Neque et faucibus viverra</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="" /></a>
-							<h2>Mattis ante fermentum</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
+						<% for(let i=0; i<event.length; i++) {%>
+							<article class="thumb">
+								<a class="image" href="<%= event[i].image%>" data-position="left center"><img src="<%= event[i].image%>"></a>
+								<h2><%= event[i].userName%></h2>
+								<p><%= event[i].caption%></p>
+							</article>
+						<% } %>
+				
 						<article class="thumb">
 							<a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/11.jpg" alt="" /></a>
 							<h2>Sed ac elementum arcu</h2>
@@ -91,8 +49,23 @@
 						</article>
 					</div>
 
+			
 					<!-- Thumbnail -->
 					<section id="thumbnails">
+						
+							
+								<% for(let i=0; i<event.length; i++) {%>
+									<article>
+										<li>
+												<a class="thumbnail" href="/event/<%= event[i]._id%>" data-position="left center">
+													<img src="<%= event[i].image%>">
+												</a>
+											<h2 ><%= event[i].userName%></h2>
+											<p><%= event[i].caption%></p>
+										</li>
+									</article>
+								<% } %>
+		
 						<article>
 							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/13.jpg" alt="" /></a>
 							<h2>Diam tempus accumsan</h2>
