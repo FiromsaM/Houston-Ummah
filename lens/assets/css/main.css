@@ -899,7 +899,7 @@ input, select, textarea {
 
 		/* @media screen and (max-width: 480px) { */
 
-			#main {
+			#main { 
 				-moz-transition: opacity 0.5s ease, visibility 0.5s;
 				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
