@@ -5,16 +5,32 @@ const Event =  require('../models/Event')
 module.exports = {
     getProfile: async (req, res) => {
         try {
-            const event = await Event.find({user: req.user.id});
+            const event = await Event.find({user: req.user.id}).sort({ createdAt: "desc" }).lean();
             res.render('profile.ejs', {event: event, user: req.user })
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    getFeed: async (req, res) => {
+        try {
+            const event = await Event.find().sort({ createdAt: "desc" }).lean();
+            res.render('feed.ejs', {event: event, user: req.user})
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    getEvent1: async (req, res) => {
+        try {
+            const event = await Event.find().sort({ createdAt: "desc" }).lean();
+            res.render('event1.ejs', {event: event, user: req.user})
         } catch (error) {
             console.log(error)
         }
     },
     getEvent: async (req, res) => {
         try {
-            const event = await Event.find().sort({ createdAt: "desc" }).lean();
-            res.render('events.ejs', {event: event, user: req.user})
+            const event = await Event.findById(req.params.id)
+            res.render('event.ejs', {event: event, user: req.user})
         } catch (error) {
             console.log(error)
         }
@@ -37,6 +53,7 @@ module.exports = {
                 image: result.secure_url,
                 cloudinaryId: result.public_id,
                 caption: req.body.caption,
+                date: req.body.date,
                 likes: 0,
                 user: req.user.id,
                 userName: req.user.userName
@@ -47,33 +64,33 @@ module.exports = {
             console.log(error)
         }
     },
-    // likeEvent: async (req, res) => {
-    //     try {
-    //         await Event.findOneAndUpdate(
-    //             {_id: req.params.id},
-    //             {
-    //                 $inc: { likes: 1 },
-    //             })
-    //             console.log("Likes +1")
-    //             res.redirect(`/event/${req.params.id}`)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // },
-    // deleteEvent: async (req, res) => {
-    //     try {
-    //         // Find event by id
-    //        let event = await Event.findById({ _id: req.params.id })
+    likeEvent: async (req, res) => {
+        try {
+            await Event.findOneAndUpdate(
+                {_id: req.params.id},
+                {
+                    $inc: { likes: 1 },
+                })
+                console.log("Likes +1")
+                res.redirect(`/event/${req.params.id}`)
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    deleteEvent: async (req, res) => {
+        try {
+            // Find event by id
+           let event = await Event.findById({ _id: req.params.id })
       
-    //        // Delete image from cloudinary
-    //        await cloudinary.uploader.destroy(event.cloudinaryId);
+           // Delete image from cloudinary
+           await cloudinary.uploader.destroy(event.cloudinaryId);
            
-    //        // Delete event from db
-    //        await Event.remove({ _id: req.params.id})
-    //        console.log("Deleted Event");
-    //        res.redirect('/profile')
-    //     } catch (error) {
-    //         res.redirect('/profile')
-    //     }
-    // }
+           // Delete event from db
+           await Event.remove({ _id: req.params.id})
+           console.log("Deleted Event");
+           res.redirect('/profile')
+        } catch (error) {
+            res.redirect('/profile')
+        }
+    }
 }

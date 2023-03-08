@@ -1,17 +1,11 @@
 <!DOCTYPE HTML>
-<!--
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Houston Ummah</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="asset/css/main.css" />
-		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css" rel="stylesheet" type="text/css" />
-
+		<link rel="stylesheet" href="/styles/carousel.css">
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -26,223 +20,112 @@
 						<nav id="nav">
 							<ul>
 								<li class="current"><a href="/">Home</a></li>
-								<li><a href="/events">Events</a></li>
+								<li><a href="/feeds">Events</a></li>
 								<li><a href="/weeklyEvents">Weekly Events</a></li>
+								<li><a href="/about">About</a></li>
 							</ul>
 						</nav>
 				</section>
 
 			<!-- Main -->
 			<section id="main" class="wrapper style2">
-				<div class="title">Weekly Events</div>
+				<div class="title"><a href="/weeklyEvents">Weekly Events</a></div>
+
+
+				<!-- Container for the image gallery -->
 				<div class="container">
 
-					<!-- Carousel -->
-					<div class="row aln-center">
-						<div class="h-96 carousel carousel-center w-full">
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/02.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/03.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/02.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/03.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div>
+					<!-- Full-width images with number text -->
+					<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+							<img src="weekly-flyer/plus1.JPG" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+							<img src="weekly-flyer/fiqh-series.JPG" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+							<img src="weekly-flyer/FNL.jpg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+							<img src="weekly-flyer/maryam.jpg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+							<img src="weekly-flyer/tajweed.jpg" style="width:100%">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+							<img src="weekly-flyer/sh.ammar's-uhmsa-class.jpg" style="width:100%">
+					</div>
+
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!-- Image text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<!-- Thumbnail images -->
+					<div class="row">
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/plus1.JPG" style="width:100%" onclick="currentSlide(1)" alt="Plus1">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/fiqh-series.JPG" style="width:100%" onclick="currentSlide(2)" alt="Fiqh Series">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/FNL.jpg" style="width:100%" onclick="currentSlide(3)" alt="Friday Night Lights">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/maryam.jpg" style="width:100%" onclick="currentSlide(4)" alt="Light of Knowledge">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/tajweed.jpg" style="width:100%" onclick="currentSlide(5)" alt="Tajweed Institute">
+						</div>
+						<div class="column">
+							<img class="demo cursor" src="weekly-flyer/sh.ammar's-uhmsa-class.jpg" style="width:100%" onclick="currentSlide(6)" alt="Shaykh Ammar's UHMSA Class">
 						</div>
 					</div>
 				</div>
+
+				<section id="intro">
+					<div class="container">
+						<ul class="actions">
+							<li><a href="/weeklyEvents" class="button style3 large">More...</a></li>
+						</ul>
+					</div>
+				</section>
 			</section> 
 
-			<!-- Intro -->
-				<!-- <section id="intro" class="wrapper style1">
-					<div class="title">The Introduction</div>
-					<div class="container">
-						<p class="style1">So in case you were wondering what this is all about ...</p>
-						<p class="style2">
-							Houston Ummah is ...
-						</p>
-						<p class="style3">It's </p>
-						<ul class="actions">
-							<li><a href="/multiverse/events.html" class="button style3 large">Proceed</a></li>
-						</ul>
-					</div>
-				</section> -->
-
-			<!-- Main -->
-				<!-- <section id="main" class="wrapper style2">
-					<div class="title">Weekly Events</div>
-					<div class="container"> -->
-
-						<!-- Carousel -->
-					<!-- <div class="row aln-center">
-						<div class="h-96 carousel carousel-center w-full">
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/02.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/03.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/02.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/03.jpg" class="w-full" />
-							</div> 
-							<div class="carousel-item w-half">
-								<img src="image/01.jpg" class="w-full" />
-							</div>
-						</div>
-					</div>
-					<section id="features">
-						<ul class="actions special">
-							<li><a href="#" class="button style1 large">Find More Events</a></li>
-						</ul>
-					</section> -->
-						<!-- Features -->
-							<!-- <section id="features">
-								<header class="style1">
-									<h2>Weekly Events</h2>
-									<p>Feugiat dolor nullam orci pretium phasellus justo</p>
-								</header>
-								<div class="feature-list">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/01.jpg" alt="" /></a>
-												<h3 class="icon solid fa-sync">Lorem ipsum dolor sit veroeros</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/01.jpg" alt="" /></a>
-												<h3 class="icon solid fa-sync">Lorem ipsum dolor sit veroeros</h3>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/01.jpg" alt="" /></a>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/02.jpg" alt="" /></a>
-												<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate et magna feugiat laoreet vel velit lorem.</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/03.jpg" alt="" /></a>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="image/03.jpg" alt="" /></a>
-											</section>
-										</div>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><a href="#" class="button style1 large">Get Started</a></li>
-									<li><a href="#" class="button style2 large">More Info</a></li>
-								</ul>
-							</section>
-
-					</div>
-				</section>  -->
-
-			<!-- Highlights -->
-				<!-- <section id="highlights" class="wrapper style3">
-					<div class="title">Weekly</div>
-					<div class="container">
-						<div class="row aln-center">
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="image/01.jpg" alt="" /></a>
-									<h3><a href="#">Aliquam diam consequat</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="image/02.jpg" alt="" /></a>
-									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="image/03.jpg" alt="" /></a>
-									<h3><a href="#">Mattis tempus lorem</a></h3>
-									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section> -->
 
 			<!-- Footer -->
 				<section id="footer" class="wrapper">
-					<div class="title">About Us</div>
+					<div class="title">Contact Us</div>
 					<div class="container">
 						<header class="style1">
-							<h2>Ipsum sapien elementum portitor?</h2>
-							<p>
-								Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-								Nam pharetra laoreet imperdiet volutpat etiam feugiat.
+							<p>We welcome the opportunity to feature your events on our website and help you promote <br> them to our community. To get started, please reach out to us so we can help you create <br> and verify your account. Once your account is set up, you'll be able to easily post and <br> share information about your events with our audience. Thank you for considering <br> Houston Ummah, and we look forward to working with you to promote Islamic events in <br> Houston.
 							</p>
 						</header>
 						<div class="row">
 							<div class="col-6 col-12-medium">
 
 								<!-- Contact Form -->
-									<section>
+								<section class="feature-list small">
+									<div class="row">
 										<form method="post" action="#">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" password="password" id="password" placeholder="password" />
-												</div>
-												<div class="col-6 col-12-small">
-													<!-- <input type="text" category="category" id="category" placeholder="category" /> -->
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" media="media" id="media" placeholder="media" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
+													<input type="text" name="name" id="contact-name" placeholder="Name/Organization Name" />
 												</div>
 												<div class="col-6 col-12-small">
 													<input type="text" name="email" id="contact-email" placeholder="Email" />
@@ -253,16 +136,12 @@
 												<div class="col-12">
 													<ul class="actions">
 														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-														<a class="style1" href="/login">Login</a> 
-														<a class="style2" href="/signup">Signup</a> 
-
-
-														
+														<li><a id="login-design" href="/login">LOGIN</a> </li>
 													</ul>
 												</div>
 											</div>
 										</form>
+									</div>
 									</section>
 
 							</div>
@@ -304,6 +183,6 @@
 			<script src="asset/js/breakpoints.min.js"></script>
 			<script src="asset/js/util.js"></script>
 			<script src="asset/js/main.js"></script>
-			<script src="https://cdn.tailwindcss.com"></script>
+			<script src="/js/carousel.js"></script>
 	</body>
 </html>

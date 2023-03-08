@@ -1,0 +1,148 @@
+
+
+/* Page Wrapper */
+
+body{
+  /* background-color: gray; */
+  font-family: Roboto, sans-serif, Arial, Helvetica;
+
+}
+
+div{
+  display: block;
+}
+
+  .container{
+    margin: 0 38px;
+    /* width: 90%; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    height: auto;
+    padding-top: 5px;
+
+  }
+
+ .center{
+  text-align: center;
+  margin-bottom: 20px;
+} 
+
+ .name{
+  font-size: 2em;
+  color: #2c3345;
+ }
+
+ .layout{
+  /* border: 1px solid red; */
+  display: flex;
+ }
+
+ .userEvents{
+  /* border: 1px solid green; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: .75em;
+  margin-bottom: .75em;
+  padding: 0.75em;
+  justify-content: center;
+  vertical-align: middle;
+ }
+
+ .event{
+  width: 32%;
+  height: auto;
+  margin-right: 3px;
+  margin-bottom: 10px;
+ }
+
+ .flyer{
+  display: block;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+
+ .form{
+  width: 30%;
+  padding: 14px 40px;
+ }
+
+ .submit, .layout {
+  margin-top: 1.25em;
+  margin-bottom: .75em;
+  border-bottom: 1px solid;
+ }
+
+ .submit{
+  padding: 14px 40px;
+
+ }
+
+ .post-event{
+  margin: 0;
+  font-size: 2em;
+  color: #2c3345;
+ }
+
+  .submit-info{
+  color: #57647e;
+}
+
+.form{
+  display: block;
+}
+
+.form-line{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+span{
+	display: block;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.form-title{
+  padding: 10px 5px;
+  width: 100%;
+  /* border-color: #57647e; */
+  /* border-radius: 10px; */
+}
+
+.form-textarea{
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.form-file{
+  /* margin: 0;
+  padding: 2rem 1.5rem; */
+  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
+  color: #5a5a5a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+ 
+
+}
+
+button{
+  margin-bottom: 50px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: aquamarine;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+
+#footer{
+  text-align: center;
+  margin-top: 2rem;
+}

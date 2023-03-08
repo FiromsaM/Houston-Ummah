@@ -1,46 +1,16 @@
-/* Box Model Hack */
-* {
-  box-sizing: border-box;
-}
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
+/* Page Wrapper */
 
-.clear {
-	clear: both;
-}
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
-body {
-  background-color: black;
-}
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
+body{
+  /* background-color: gray; */
+  font-family: Roboto, sans-serif, Arial, Helvetica;
 
 }
 
-footer {
-
+#page-wrapper > section {
+  margin-bottom: 0;
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
-
+/* Header */
 #header {
   display: -moz-flex;
   display: -webkit-flex;
@@ -55,17 +25,31 @@ footer {
   -ms-justify-content: center;
   justify-content: center;
   position: relative;
-  height: 8em;
-  /* padding: 0; */
+  background-color: black;
+  height: 4em;
+  padding: 0;
 }
 
+  #header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/overlay.png");
+  }
+
+  .homepage #header {
+    height: 10em;
+  }
 
 /* Nav */
 
 #nav {
   position: absolute;
   display: block;
-  /* top: 2.5em; */
+  top: 2.5em;
   left: 0;
   width: 100%;
   text-align: center;
@@ -107,43 +91,76 @@ footer {
       }
 
       #nav > ul > li:hover > a {
-        color: #fff;
+        color: #0e0d0d;
       }
 
       #nav > ul > li.active > a, #nav > ul > li.active > span {
-        color: #fff;
+        color: #131212;
       }
 
+
 .container{
-  /* width: 90%; */
+  /* border: 1px solid black; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 0 20px;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   -webkit-overflow-scrolling: touch;
 
 }
+.layout{
+  /* border: 1px solid red; */
+  margin: 10px 10px 30px 10px;
+  padding: 10px;
+  height: auto;
+  display: flex;
+}
 
-.days{
+.row-day, .row-event{
+  width: 50%;
+}
+
+.row-day{
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.row-event{
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.75em;
+  justify-content: space-between;
+  vertical-align: middle;
+
+}
+
+.event{
+  /* width: 30%; */
+  height: auto;
+  padding: 10px;
+  /* width: 30%; */
+
+}
+
+.flyer{
+  display: block;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.dayOfWeek{
   font-weight: 900;
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 0.25em;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.75);
-  display: block;
+  color: rgba(12, 12, 12, 0.75);
   text-decoration-line: underline;
 }
 
-#grid{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 0.75em;
-  justify-content: center;
-  vertical-align: middle;
-  
-}
-
-#grid .profile{
+.profile{
   position: relative;
   width: 30%;
   height: 450px;
@@ -154,7 +171,7 @@ footer {
   margin-top: 10px;
 }
 
-#grid .profile .profile-picture{
+.profile .profile-picture{
   display: block;
   border: 0;
   outline: 0;
@@ -162,7 +179,7 @@ footer {
   height: 300px;
   width: 100%;
 }
-#grid .profile .profile-picture img{
+.profile .profile-picture img{
   display: block; 
   height: 100%;
   width: 100%; 
@@ -171,7 +188,7 @@ p{
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0;
   margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(0, 0, 0);
   margin-top: 10px;
   margin-left: 8px;
   margin-bottom: 5px;
@@ -184,7 +201,7 @@ p{
   /* margin-top: 10px; */
   margin-left: 8px;
   margin-bottom: 5px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -194,13 +211,14 @@ h1 {
   font-size: 2em;
   letter-spacing: 0.25em;
   text-align: center;
-  color: white;
+  color: rgb(41, 41, 41);
 }
 a{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .info{
   height: 150px;
   text-align: center;
+  background-color: transparent;
 }

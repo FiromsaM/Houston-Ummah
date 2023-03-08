@@ -1454,11 +1454,23 @@ input, select, textarea {
 /* Header */
 
 	body {
-		padding: 0 0 4em 0;
+		padding: 4em 0 0 0;
 	}
 
 	#header {
-		-moz-transform: translateY(0);
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		/* -moz-transform: translateY(0);
 		-webkit-transform: translateY(0);
 		-ms-transform: translateY(0);
 		transform: translateY(0);
@@ -1468,11 +1480,12 @@ input, select, textarea {
 		transition: transform 1s ease;
 		-moz-user-select: none;
 		-ms-user-select: none;
-		-webkit-user-select: none;
+		-webkit-user-select: none; */
 		background: #1f2224;
-		bottom: -1em;
-		height: 5em;
+		bottom: auto;
+		height: 4em;
 		left: 0;
+		top: 0;
 		line-height: 4em;
 		padding: 0 1.5em;
 		position: fixed;
@@ -1506,10 +1519,64 @@ input, select, textarea {
 					color: inherit !important;
 				}
 
+				/* #nav {
+					position: absolute;
+					display: block;
+					top: 2.5em; 
+					left: 0;
+					width: 100%;
+					text-align: center;
+				}
+			
+					#nav > ul {
+						display: inline-block;
+						border-radius: 0.35em;
+						box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+						padding: 0 1.5em 0 1.5em;
+					}
+			
+						#nav > ul > li {
+							display: inline-block;
+							text-align: center;
+							padding: 0 1.5em 0 1.5em;
+						}
+			
+							#nav > ul > li > ul {
+								display: none;
+							}
+			
+							#nav > ul > li > a, #nav > ul > li > span {
+								display: block;
+								color: #eee;
+								color: rgba(255, 255, 255, 0.75);
+								text-transform: uppercase;
+								text-decoration: none;
+								font-size: 0.7em;
+								letter-spacing: 0.25em;
+								height: 5em;
+								line-height: 5em;
+								-moz-transition: all .25s ease-in-out;
+								-webkit-transition: all .25s ease-in-out;
+								-o-transition: all .25s ease-in-out;
+								-ms-transition: all .25s ease-in-out;
+								transition: all .25s ease-in-out;
+								outline: 0;
+							}
+			
+							#nav > ul > li:hover > a {
+								color: #fff;
+							}
+			
+							#nav > ul > li.active > a, #nav > ul > li.active > span {
+								color: #fff;
+							} */
+
 		#header nav {
 			position: absolute;
-			right: 0;
+			left: 0;
 			top: 0;
+			width: 100%;
+			text-align: center;
 		}
 
 			#header nav > ul {
@@ -1583,7 +1650,7 @@ input, select, textarea {
 				padding: 0 1.15em;
 			}
 
-	} 
+	}
 
 /* Main */
 
@@ -1634,7 +1701,7 @@ input, select, textarea {
 				width: 100%;
 				
 			}
-
+ 
 			#main .thumb > .image {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
@@ -2128,3 +2195,8 @@ input, select, textarea {
 		#footer .copyright a {
 			color: inherit;
 		}
+
+#list{
+	list-style: none;
+}
+
