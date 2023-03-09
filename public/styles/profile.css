@@ -112,8 +112,7 @@ span{
   color: #5a5a5a;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   width: 80%;
- 
-
+  padding: 3px;
 }
 
 button{
@@ -123,6 +122,12 @@ button{
   border: none;
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+button a{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 #footer{
@@ -136,18 +141,11 @@ button{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     height: auto;
     padding-top: 2px;
-
   }
 
   .center{
-    text-align: center;
     margin-bottom: 10px;
   } 
-
-  .name{
-    font-size: 2em;
-    color: #2c3345;
-  }
 
   .submit{
     padding: 10px 30px;
@@ -159,18 +157,7 @@ button{
     border-bottom: 1px solid;
   }
 
-  .post-event{
-    margin: 0;
-    font-size: 2em;
-    color: #2c3345;
-  }
-
-    .submit-info{
-    color: #57647e;
-  }
-
   .layout{
-    /* border: 1px solid red; */
     display: flex;
   }
 
@@ -206,21 +193,7 @@ button{
 
   .form-file{
     font: 14px;
-    color: #5a5a5a;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 80%;
-  }
-
- .userEvents{
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 0.75em;
-  margin-bottom: .75em;
-  padding: 0.75em;
-  justify-content: center;
-  vertical-align: middle;
   }
 
   .event{
@@ -235,99 +208,228 @@ button{
     border-radius: 4px;
     font-size: 16px;
   }
+
+  button a{
+    font-size: 18px;
+    text-decoration: none;
+  }
 }
 
 @media screen and (max-width: 750px) {
-  .container{
-    margin: 0px;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    height: auto;
-    padding-top: 5px;
+  .center{
+    margin-bottom: 5px;
+  } 
 
+  .name, .post-event{
+    font-size: 1.5em;
   }
+
+  .submit{
+    padding: 8px 25px;
+  }
+
+  .submit, .layout, .userEvents {
+    margin-top: 1em;
+    margin-bottom: .75em;
+    border-bottom: 1px solid;
+  }
+
   .layout{
     display: block;
-   }
+  }
 
-   .form{
+  .form{
     width: 100%;
-    margin: 10px;
-    padding: 0;
-    border-bottom: 1px solid;
+    margin: 0;
+    /* border-bottom: 1px solid; */
   }
 
    .form-title, .form-file, .form-textarea{
     width: 50%;
+    margin: 0 20px;
   }
 
-   .userEvents{
-    width: 100%;
-     border: 1px solid yellow;
-     margin: 0;
-     padding: 0;
-   }
-
-   .event{
-    width: 50%;
-    height: auto;
-    margin-right: 0;
+  .form-line{
+    margin-top: 10px;
     margin-bottom: 10px;
-   }
-  
-   .flyer{
+  }
+
+  span{
     display: block;
-    object-fit: cover;
-    height: auto;
+    margin: 8px 20px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .form-title{
+    padding: 10px 5px;
+  }
+
+  .form-textarea{
+    padding: 10px 5px;
+    height: 100px;
+  }
+
+  .form-file{
+    font: 18px;
+  }
+
+  .submitBtn{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+ .userEvents{
+  width: 100%;
+  padding: 0; 
+
+  }
+
+  .event{
+    width: 50%;
+    margin-right: 0;
+  }
+
+  button{
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .center{
+    margin-bottom: 5px;
+  } 
+
+  .name, .post-event{
+    font-size: 1.5em;
+  }
+
+  .submit{
+    padding: 8px 25px;
+  }
+
+  .submit, .layout {
+    margin-top: 1em;
+    margin-bottom: .75em;
+    border-bottom: 1px solid;
+  }
+
+  .layout{
+    display: block;
+  }
+
+  .form{
     width: 100%;
+    margin: 0;
+    /* border-bottom: 1px solid; */
+  }
+
+   .form-title, .form-file, .form-textarea{
+    width: 50%;
+    margin: 0 20px;
+  }
+
+  .form-line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  span{
+    display: block;
+    margin: 8px 20px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .form-title{
+    padding: 10px 5px;
+  }
+
+  .form-textarea{
+    padding: 10px 5px;
+    height: 100px;
+  }
+
+  .form-file{
+    font: 18px;
+  }
+
+  .submitBtn{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+ .userEvents{
+  width: 100%;
+  padding: 0; 
+
+  }
+
+  .event{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  button{
+    margin-bottom: 10px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button a{
+    font-size: 18px;
+    text-decoration: none;
   }
 
 }
 
-@media screen and (max-width: 500px) {
-  .container{
-    margin: 0px;
-    width: 100%;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
-    height: auto;
-    padding-top: 5px;
-
+@media screen and (max-width: 400px) {
+  .name, .post-event{
+    font-size: 1.3em;
   }
-  .layout{
-    /* border: 1px solid red; */
-    display: block;
-   }
 
-   .form{
-    width: 100%;
-    padding: 0;
+  .submit{
+    padding: 4px 20px;
+  }
+
+  .submit, .layout, .userEvents {
+    margin-top: .5em;
+    margin-bottom: .5em;
     border-bottom: 1px solid;
   }
 
    .form-title, .form-file, .form-textarea{
-    width: 50%;
+    width: 80%;
+    margin: 0 20px;
   }
 
-   .userEvents{
-    width: 100%;
-    /* display: block; */
-     border: 1px solid yellow;
-     margin: 0;
-     padding: 0;
-   }
+  .submitBtn{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
 
-   .event{
-    width: 100%;
-    height: auto;
-    margin-right: 0;
+  button{
     margin-bottom: 10px;
-   }
-  
-   .flyer{
-    display: block;
-    object-fit: cover;
-    height: auto;
-    width: 100%;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 16px;
   }
 
+  button a{
+    font-size: 18px;
+    text-decoration: none;
+  }
 }

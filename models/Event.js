@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const EventSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
       },
       image: {
         type: String,
@@ -18,7 +17,6 @@ const EventSchema = new mongoose.Schema({
       },
       date:{
         type: Date,
-        require: true,
       },
       user: {
         type: mongoose.Schema.Types.ObjectId,

@@ -9,7 +9,6 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="login-page">
   <div class="form">
     <% if (locals.messages.errors) { %>
@@ -23,21 +22,15 @@
       <% }) %>    
   <% } %>
     <form class="register-form" action="/signup" method="POST">
-      <!-- <label for="userName" class="form-label">User Name</label> -->
       <input type="text" class="form-control" id="userName" name="userName" placeholder="User Name">
-      <!-- <input type="text" placeholder="name"/> -->
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email Adress">
       <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
-<!-- 
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/> -->
       <button type="submit">create</button>
     </form>
   </div>
 </div>
 
-<!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 <%- include('partials/footer') -%>
 
