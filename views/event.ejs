@@ -58,7 +58,9 @@
             <button class="deleteBtn fa-solid fa-trash-can"></button>
           </form>
           <%}%></i>
-        <p class="expire">Date: <%= event.date %></p>
+        <% if( event.date != null){ %>
+          <p class="expire">Date: <%= event.date %></p>
+        <%}%>
       </div>
     </div>
     

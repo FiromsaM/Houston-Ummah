@@ -1,115 +1,17 @@
 
-/* Page Wrapper */
-
 body{
-  /* background-color: gray; */
   font-family: Roboto, sans-serif, Arial, Helvetica;
-
 }
-
-#page-wrapper > section {
-  margin-bottom: 0;
-}
-/* Header */
-#header {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  position: relative;
-  background-color: black;
-  height: 4em;
-  padding: 0;
-}
-
-  #header:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("images/overlay.png");
-  }
-
-  .homepage #header {
-    height: 10em;
-  }
-
-/* Nav */
-
-#nav {
-  position: absolute;
-  display: block;
-  top: 2.5em;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-  #nav > ul {
-    display: inline-block;
-    border-radius: 0.35em;
-    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-    padding: 0 1.5em 0 1.5em;
-  }
-
-    #nav > ul > li {
-      display: inline-block;
-      text-align: center;
-      padding: 0 1.5em 0 1.5em;
-    }
-
-      #nav > ul > li > ul {
-        display: none;
-      }
-
-      #nav > ul > li > a, #nav > ul > li > span {
-        display: block;
-        color: #eee;
-        color: rgba(255, 255, 255, 0.75);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 0.7em;
-        letter-spacing: 0.25em;
-        height: 5em;
-        line-height: 5em;
-        -moz-transition: all .25s ease-in-out;
-        -webkit-transition: all .25s ease-in-out;
-        -o-transition: all .25s ease-in-out;
-        -ms-transition: all .25s ease-in-out;
-        transition: all .25s ease-in-out;
-        outline: 0;
-      }
-
-      #nav > ul > li:hover > a {
-        color: #0e0d0d;
-      }
-
-      #nav > ul > li.active > a, #nav > ul > li.active > span {
-        color: #131212;
-      }
-
 
 .container{
-  /* border: 1px solid black; */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 0 20px;
   justify-content: center;
   align-items: center;
   -webkit-overflow-scrolling: touch;
-
 }
+
 .layout{
-  /* border: 1px solid red; */
   margin: 10px 10px 30px 10px;
   padding: 10px;
   height: auto;
@@ -121,27 +23,21 @@ body{
 }
 
 .row-day{
-  display: block;
   text-align: center;
   margin: auto;
 }
 
 .row-event{
-  /* border: 1px solid yellow; */
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.75em;
   justify-content: space-between;
   vertical-align: middle;
-
 }
 
 .event{
-  /* width: 30%; */
   height: auto;
   padding: 10px;
-  /* width: 30%; */
-
 }
 
 .flyer{
@@ -221,4 +117,36 @@ a{
   height: 150px;
   text-align: center;
   background-color: transparent;
+}
+
+#myInfo{
+  display: none;
+}
+
+.toggle{
+  float: right;
+}
+
+@media screen and (max-width: 700px) {
+  .layout{
+    display: block;
+  }
+
+  .row-day, .row-event{
+    width: 100%;
+  }
+  .row-event{
+    /* border: 1px solid yellow; */
+    display: block;
+    padding: 0 0.75em;
+    justify-content: space-between;
+  
+  }
+
+  .flyer{
+    display: block;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
 }

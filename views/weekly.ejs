@@ -7,14 +7,14 @@
   <title>Weekly Events</title>
   <link rel="stylesheet" href="/styles/weekly.css">
   <link rel="stylesheet" href="/styles/normalize.css">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
   <%- include('partials/header') -%>
 
 </head>
 <body>
- 
-
+  
   <h1><a href="/">Weekly Events</a></h1>
-
 
 <div class="container">
   <div class="layout">
@@ -29,26 +29,27 @@
   </div>
 
   <div class="layout">
+    <div class="row-day">
+      <h2 class="dayOfWeek">Tuesday</h2>
+    </div>
     <div class="row-event">
-      <!-- <div id="grid"> -->
         <div class="event">
             <img class= "flyer" src="weekly-flyer/plus1.JPG"  alt="">
-          <!-- <div class="info">
-            <p class="name">Plus One</p>
-            <p class="caption">Don’t forget to bring a friend, introduce them to others, and prepare your shout outs for this evening!</p>
-          </div> -->
+            <button id="toggle">Try it</button>
+            <div id="myInfo">
+              <div class="info">
+                <p class="name">Plus One</p>
+                <p class="caption">Don’t forget to bring a friend, introduce them to others, and prepare your shout outs for this evening!</p>
+              </div>       
+            </div>
         </div>
        <div class="event">
             <img class="flyer" src="weekly-flyer/maryam.jpg"  alt="">
-          <!-- <div class="info">
-            <p class="name">Maryam Islamic Center</p>
-            <p class="caption">Join us every Tuesday for our Illuminated Path classes, exploring the Sirah of Syedna Mohammad ﷺ.</p>
-          </div> -->
-        </div>
-      <!-- </div> -->
-    </div>
-    <div class="row-day">
-      <h2 class="dayOfWeek">Tuesday</h2>
+              <!-- <div class="info">
+                <p class="name">Plus One</p>
+                <p class="caption">Don’t forget to bring a friend, introduce them to others, and prepare your shout outs for this evening!</p>
+              </div>        -->
+      </div> 
     </div>
   </div>
 
@@ -59,38 +60,29 @@
     <div class="row-event">
       <div class="event">
         <img class="flyer" src="weekly-flyer/sh.ammar's-uhmsa-class.jpg"  alt="">
+          <!-- <div class="info">
+            <p class="name">UHMSA</p>
+            <p class="caption">Alhamdulillah we are back with one of MSA's most prized possessions, classes with Sh. Ammar!</p>
+          </div>         -->
       </div>
       <div class="event">
         <img class="flyer" src="weekly-flyer/tajweed.jpg"  alt="">
-      </div>
-      <!-- <div id="grid">
-        <div class="profile">
-          <div class="profile-picture">
-            <img src="weekly-flyer/sh.ammar's-uhmsa-class.jpg"  alt="">
-          </div>
-          <div class="info">
-            <p class="name">UHMSA</p>
-            <p class="caption">Alhamdulillah we are back with one of MSA's most prized possessions, classes with Sh. Ammar!</p>
-          </div>
-        </div>
-        <div class="profile">
-          <div class="profile-picture">
-            <img src="weekly-flyer/tajweed.jpg"  alt="">
-          </div>
-          <div class="info">
+          <!-- <div class="info">
             <p class="name">Tajweed Institute</p>
             <p class="caption">Tajweed Institute presents Weekly Lectures after Isha!
               <br>
               • Wednesdays: Dr. Ra'ed Alrosan will discuss Tajweed Rules
               <br>
               Join us to expand your knowledge!</p>
-          </div>
-        </div>
-      </div> -->
+          </div>         -->
+      </div>
     </div>
   </div>
 
   <div class="layout">
+    <div class="row-day">
+      <h2 class="dayOfWeek">Thursday</h2>
+    </div>
     <div class="row-event">
         <div class="event">
           <img class="flyer"  src="weekly-flyer/fiqh-series.jpg"  alt="">
@@ -118,9 +110,6 @@
         </div> -->
       </div>
   </div>
-  <div class="row-day">
-    <h2 class="dayOfWeek">Thursday</h2>
-  </div>
 </div>
 
   <div class="layout">
@@ -139,6 +128,9 @@
   </div>
 
   <div class="layout">
+    <div class="row-day">
+      <h2 class="dayOfWeek">Saturday</h2>
+    </div>
     <div class="row-event">
         <div class="event">
           <img class="flyer" src="weekly-flyer/tajweed.jpg"  alt="">
@@ -151,9 +143,6 @@
             <br>
             Join us to expand your knowledge!</p>
         </div> -->
-    </div>
-    <div class="row-day">
-      <h2 class="dayOfWeek">Saturday</h2>
     </div>
   </div>
 
@@ -177,7 +166,10 @@
   </div>
 </div>
 
+
 <%- include('partials/footer') -%>
+<script src="/js/toggle.js"></script>
+
 
 </body>
 </html>

@@ -5,16 +5,12 @@
 body{
   /* background-color: gray; */
   font-family: Roboto, sans-serif, Arial, Helvetica;
-
-}
-
-div{
-  display: block;
+  margin: 0;
+  padding: 0;
 }
 
   .container{
-    margin: 0 38px;
-    /* width: 90%; */
+    margin: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     height: auto;
     padding-top: 5px;
@@ -37,7 +33,6 @@ div{
  }
 
  .userEvents{
-  /* border: 1px solid green; */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   width: 70%;
   display: flex;
@@ -51,22 +46,15 @@ div{
 
  .event{
   width: 32%;
-  height: auto;
   margin-right: 3px;
   margin-bottom: 10px;
  }
 
  .flyer{
-  display: block;
   object-fit: cover;
-  height: 300px;
+  height: auto;
   width: 100%;
 }
-
- .form{
-  width: 30%;
-  padding: 14px 40px;
- }
 
  .submit, .layout {
   margin-top: 1.25em;
@@ -91,6 +79,8 @@ div{
 
 .form{
   display: block;
+  width: 30%;
+  margin: 14px 20px;
 }
 
 .form-line{
@@ -108,41 +98,236 @@ span{
 
 .form-title{
   padding: 10px 5px;
-  width: 100%;
-  /* border-color: #57647e; */
-  /* border-radius: 10px; */
+  width: 80%;
 }
 
 .form-textarea{
   padding: 10px;
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
 .form-file{
-  /* margin: 0;
-  padding: 2rem 1.5rem; */
   font: 1rem/1.5 "PT Sans", Arial, sans-serif;
   color: #5a5a5a;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  width: 100%;
+  width: 80%;
  
 
 }
 
 button{
-  margin-bottom: 50px;
   padding: 10px 30px;
   border-radius: 4px;
   background-color: aquamarine;
   border: none;
   font-size: 18px;
-  font-weight: 400;
-
+  margin-bottom: 20px;
 }
-
 
 #footer{
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    margin: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    height: auto;
+    padding-top: 2px;
+
+  }
+
+  .center{
+    text-align: center;
+    margin-bottom: 10px;
+  } 
+
+  .name{
+    font-size: 2em;
+    color: #2c3345;
+  }
+
+  .submit{
+    padding: 10px 30px;
+  }
+
+  .submit, .layout {
+    margin-top: 1em;
+    margin-bottom: .75em;
+    border-bottom: 1px solid;
+  }
+
+  .post-event{
+    margin: 0;
+    font-size: 2em;
+    color: #2c3345;
+  }
+
+    .submit-info{
+    color: #57647e;
+  }
+
+  .layout{
+    /* border: 1px solid red; */
+    display: flex;
+  }
+
+  .form{
+    display: block;
+    width: 30%;
+    margin: 14px 20px;
+  }
+
+  .form-line{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  span{
+    display: block;
+    margin: 8px 0;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .form-title{
+    padding: 8px 3px;
+    width: 80%;
+  }
+
+  .form-textarea{
+    padding: 8px;
+    width: 80%;
+    height: auto;
+  }
+
+  .form-file{
+    font: 14px;
+    color: #5a5a5a;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 80%;
+  }
+
+ .userEvents{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0.75em;
+  margin-bottom: .75em;
+  padding: 0.75em;
+  justify-content: center;
+  vertical-align: middle;
+  }
+
+  .event{
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  button{
+    margin-bottom: 10px;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container{
+    margin: 0px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    height: auto;
+    padding-top: 5px;
+
+  }
+  .layout{
+    display: block;
+   }
+
+   .form{
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+    border-bottom: 1px solid;
+  }
+
+   .form-title, .form-file, .form-textarea{
+    width: 50%;
+  }
+
+   .userEvents{
+    width: 100%;
+     border: 1px solid yellow;
+     margin: 0;
+     padding: 0;
+   }
+
+   .event{
+    width: 50%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+   }
+  
+   .flyer{
+    display: block;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+    margin: 0px;
+    width: 100%;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+    height: auto;
+    padding-top: 5px;
+
+  }
+  .layout{
+    /* border: 1px solid red; */
+    display: block;
+   }
+
+   .form{
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid;
+  }
+
+   .form-title, .form-file, .form-textarea{
+    width: 50%;
+  }
+
+   .userEvents{
+    width: 100%;
+    /* display: block; */
+     border: 1px solid yellow;
+     margin: 0;
+     padding: 0;
+   }
+
+   .event{
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+   }
+  
+   .flyer{
+    display: block;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+
 }

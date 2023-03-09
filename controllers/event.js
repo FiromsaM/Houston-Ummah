@@ -54,7 +54,6 @@ module.exports = {
                 cloudinaryId: result.public_id,
                 caption: req.body.caption,
                 date: req.body.date,
-                likes: 0,
                 user: req.user.id,
                 userName: req.user.userName
             });

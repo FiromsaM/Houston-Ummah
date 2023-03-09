@@ -15,11 +15,6 @@ const EventSchema = new mongoose.Schema({
       },
       caption: {
         type: String,
-        required: true,
-      },
-      likes: {
-        type: Number,
-        required: true,
       },
       date:{
         type: Date,
