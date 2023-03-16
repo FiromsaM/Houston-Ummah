@@ -13,18 +13,29 @@
 
 </head>
 <body>
-  
   <h1><a href="/">Weekly Events</a></h1>
-
-<div class="container">
+  <div class="container">
   <div class="layout">
     <div class="row-day">
       <h2 class="dayOfWeek">Monday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "monday"))  {%> 
         <div class="event">
-        <h2 class="dayOfWeek">Nothing yet...</h2>
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+          <div class="event">
+          <h2 class="dayOfWeek">Nothing yet...</h2>
+          </div>
+      <% } %>
     </div>
   </div>
 
@@ -33,49 +44,46 @@
       <h2 class="dayOfWeek">Tuesday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "tuesday"))  {%> 
         <div class="event">
-            <img class= "flyer" src="weekly-flyer/plus1.JPG"  alt="">
-            <!-- <button id="toggle">Try it</button>
-            <div id="myInfo">
-              <div class="info">
-                <p class="name">Plus One</p>
-                <p class="caption">Don’t forget to bring a friend, introduce them to others, and prepare your shout outs for this evening!</p>
-              </div>       
-            </div> -->
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
-       <div class="event">
-            <img class="flyer" src="weekly-flyer/maryam.jpg"  alt="">
-              <!-- <div class="info">
-                <p class="name">Plus One</p>
-                <p class="caption">Don’t forget to bring a friend, introduce them to others, and prepare your shout outs for this evening!</p>
-              </div>        -->
-      </div> 
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div class="event">
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>
+      <% } %>
     </div>
   </div>
-
+  
   <div class="layout">
     <div class="row-day">
       <h2 class="dayOfWeek">Wednesday</h2>
     </div>
     <div class="row-event">
-      <div class="event">
-        <img class="flyer" src="weekly-flyer/sh.ammar's-uhmsa-class.jpg"  alt="">
-          <!-- <div class="info">
-            <p class="name">UHMSA</p>
-            <p class="caption">Alhamdulillah we are back with one of MSA's most prized possessions, classes with Sh. Ammar!</p>
-          </div>         -->
-      </div>
-      <div class="event">
-        <img class="flyer" src="weekly-flyer/tajweed.jpg"  alt="">
-          <!-- <div class="info">
-            <p class="name">Tajweed Institute</p>
-            <p class="caption">Tajweed Institute presents Weekly Lectures after Isha!
-              <br>
-              • Wednesdays: Dr. Ra'ed Alrosan will discuss Tajweed Rules
-              <br>
-              Join us to expand your knowledge!</p>
-          </div>         -->
-      </div>
+      <% count = 0 %>
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "wednesday"))  {%> 
+        <div class="event">
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
+        </div>
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div class="event">
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>
+      <% } %>
     </div>
   </div>
 
@@ -84,66 +92,70 @@
       <h2 class="dayOfWeek">Thursday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+        <% for(let i=0; i<event.length; i++) {%>
+          <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "thursday"))  {%> 
         <div class="event">
-          <img class="flyer"  src="weekly-flyer/fiqh-series.jpg"  alt="">
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
-        <!-- <div class="info">
-          <p class="name">Suhbah Institute</p>
-          <p class="caption">Suhbah.com/fiqhseries - So excited to announce our NEW and FREE weekly recurring halaqa at Suhbah open to the public! Starting February 2nd
-            <br>
-            Join us EVERY Thursday after Isha (8pm CST) for a dive into the world of Fiqh (practical laws and applications) in our new Fiqh Series with Shaykh Abdullah Ashraf!</p>
-        </div> -->
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
         <div class="event">
-          <img class="flyer"  src="weekly-flyer/thursday-tafseer.jpg" alt="">
-          <!-- <div class="info">
-            <p class="name">Hamd Institute</p>
-            <p class="caption">We are excited to resume our community Thursday Tafseer program. As the month of Ramadan comes each speaker will dive in a unique style going over certain passage or surah of the Quran.
-              <br>
-              Join us every Thursday for 6 weeks starting January 19th after isha. Bring your family and friends. RSVP: hamdinstitute.org/events</p>
-          </div> -->
+        <h2 class="dayOfWeek">Nothing yet...</h2>
         </div>
-       <div class="event">
-        <img class="flyer"  src="weekly-flyer/maryam.jpg"  alt="">
-        <!-- <div class="info">
-          <p class="name">Maryam Islamic Center</p>
-          <p class="caption">Join us every Thursday to discuss Islamic Financial Literacy; understanding the key principles of Islamic finance, and how to apply them in today's world. Discover how to use Islamic financial principles to practice responsible spending and investing!</p>
-        </div> -->
-      </div>
+      <% } %>
   </div>
-</div>
+  </div>
 
   <div class="layout">
     <div class="row-day">
       <h2 class="dayOfWeek">Friday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+        <% for(let i=0; i<event.length; i++) {%>
+          <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "friday"))  {%> 
         <div class="event">
-          <img class="flyer" src="weekly-flyer/FNL.jpg"  alt="">
-          <!-- <div class="info">
-            <p class="name">CLIC</p>
-            <p class="caption">Come join us every Friday night for some great conversation, laughs, and worship! Families are always welcome, so bring the kiddos. We have FREE babysitting. You can watch online or join us in person. Also, if you want to hear a particular topic or question discussed, leave it in the comments below! See you there InshaAllah!</p>
-          </div> -->
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
-    </div>
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div class="event">
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>
+      <% } %>
   </div>
-
+  </div>
   <div class="layout">
     <div class="row-day">
       <h2 class="dayOfWeek">Saturday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+        <% for(let i=0; i<event.length; i++) {%>
+          <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "saturday"))  {%> 
         <div class="event">
-          <img class="flyer" src="weekly-flyer/tajweed.jpg"  alt="">
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
-        <!-- <div class="info">
-          <p class="name">Tajweed Institute</p>
-          <p class="caption">Tajweed Institute presents Weekly Lectures after Isha!
-            <br>
-            • Saturdays: Sheikh Mikael will talk about The Building Blocks of a Muslim
-            <br>
-            Join us to expand your knowledge!</p>
-        </div> -->
-    </div>
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div class="event">
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>
+      <% } %>
+  </div>
   </div>
 
   <div class="layout">
@@ -151,21 +163,24 @@
       <h2 class="dayOfWeek">Sunday</h2>
     </div>
     <div class="row-event">
+      <% count = 0 %>
+        <% for(let i=0; i<event.length; i++) {%>
+          <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "sunday"))  {%> 
         <div class="event">
-          <img class="flyer" src="weekly-flyer/tajweed.jpg"  alt="">
-          <!-- <div class="info">
-            <p class="name">Tajweed Institute</p>
-            <p class="caption">Tajweed Institute presents Weekly Lectures after Isha!
-              <br>
-              • Sundays: Sheikh Kassim will be going over Seerah
-              <br>
-              Join us to expand your knowledge! </p>
-          </div> -->
+          <a href="/event/<%= event[i]._id%>">
+            <img class="flyer" src="<%= event[i].image%>" >
+          </a>      
         </div>
-    </div>
+        <% count = 1 %>     
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div class="event">
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>
+      <% } %>
   </div>
-</div>
-
+  </div>
 
 <%- include('partials/footer') -%>
 </body>

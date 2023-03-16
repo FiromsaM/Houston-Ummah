@@ -19,14 +19,6 @@ module.exports = {
             console.log(error)
         }
     },
-    getEvent1: async (req, res) => {
-        try {
-            const event = await Event.find().sort({ createdAt: "desc" }).lean();
-            res.render('event1.ejs', {event: event, user: req.user})
-        } catch (error) {
-            console.log(error)
-        }
-    },
     getEvent: async (req, res) => {
         try {
             const event = await Event.findById(req.params.id)
@@ -37,7 +29,9 @@ module.exports = {
     },
     getWeeklyEvent: async (req, res) => {
         try {
-            res.render('weekly.ejs')
+            const event = await Event.find().sort({ createdAt: "desc" }).lean();
+
+            res.render('weekly.ejs', {event: event, user: req.user})
         } catch (error) {
             console.log(error)
         }
@@ -53,6 +47,8 @@ module.exports = {
                 image: result.secure_url,
                 cloudinaryId: result.public_id,
                 caption: req.body.caption,
+                weekly: req.body.weekly,
+                dayOfWeek: req.body.dayOfWeek,
                 date: req.body.date,
                 user: req.user.id,
                 userName: req.user.userName

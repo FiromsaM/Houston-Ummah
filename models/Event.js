@@ -15,6 +15,13 @@ const EventSchema = new mongoose.Schema({
       caption: {
         type: String,
       },
+      weekly:{
+        type: Boolean,
+        require: true
+      },
+      dayOfWeek: {
+        type: String,
+      },
       date:{
         type: Date,
       },

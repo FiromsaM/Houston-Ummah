@@ -10,10 +10,6 @@ router.get('/profile', ensureAuth, eventControllers.getProfile)
 router.get('/feeds', eventControllers.getFeed)
 router.get('/weeklyevents', eventControllers.getWeeklyEvent)
 router.get('/about', homeController.getAbout)
-router.get('/event1', eventControllers.getEvent1)
-
-
-
 
 router.get('/login', authController.getLogin)
 router.post('/login', authController.postLogin)
