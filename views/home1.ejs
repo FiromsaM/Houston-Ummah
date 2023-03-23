@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HoustonUmmah</title>
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <%- include('partials/header') -%>
+</head>
+<body>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 class="homeTitle"> <a href="/">Houston Ummah</a></h1>
+    </div>
+  </div>
+
+  <section id="main" class="wrapper style2">
+    <div class="title"><a href="/weeklyEvents">Weekly Events</a></div>
+
+    <section class="container"> 
+      <button class="pre-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <div class="carousel-container">
+          <% for(let i=0; i < 6; i++) {%>
+            <% if ((event[i].weekly === true))  {%> 
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <!-- <a href="/event/<%= event[i]._id%>"> -->
+                  <img src="<%= event[i].image%>" class="carousel-thumb" alt="">
+                <!-- </a>       -->
+              </div>    
+            <% } %>
+          <% } %>
+          </div>
+      </div>
+    </section>
+
+    <div id="more">
+      <button class="btn-more">
+        <a href="/weeklyEvents" class="button style3 large">More...</a>
+      </button>
+    </div>
+	</section> 
+
+  <section id="main" class="wrapper style2">
+    <div class="title"><a href="/weeklyEvents">Weekly Events</a></div>
+
+    <section class="container"> 
+      <button class="pre-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <div class="carousel-container">
+          <div class="carousel-card">
+              <div class="carousel-image">
+                  <img src="weekly-flyer/plus1.JPG" class="carousel-thumb" alt="">
+              </div>
+          </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/fiqh-series.JPG" class="carousel-thumb" alt="">
+            </div>
+          </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/sh.ammar's-uhmsa-class.JPG" class="carousel-thumb" alt="">
+            </div>
+        </div>
+        <div class="carousel-card">
+          <div class="carousel-image">
+              <img src="weekly-flyer/tajweed.JPG" class="carousel-thumb" alt="">
+          </div>
+        </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/FNL.JPG" class="carousel-thumb" alt="">
+            </div>
+        </div>
+        <div class="carousel-card">
+          <div class="carousel-image">
+              <img src="weekly-flyer/maryam.JPG" class="carousel-thumb" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+      <div id="more">
+        <button class="btn-more">
+          <a href="/weeklyEvents" class="button style3 large">More...</a>
+        </button>
+        
+      </div>
+	</section> 
+
+  <section id="footer" class="wrapper style">
+    <div class="title title1"><a href="/weeklyEvents">Iftars</a></div>
+
+    <section class="container"> 
+      <button class="pre-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <div class="carousel-container">
+          <div class="carousel-card">
+              <div class="carousel-image">
+                  <img src="weekly-flyer/plus1.JPG" class="carousel-thumb" alt="">
+              </div>
+          </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/fiqh-series.JPG" class="carousel-thumb" alt="">
+            </div>
+          </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/sh.ammar's-uhmsa-class.JPG" class="carousel-thumb" alt="">
+            </div>
+        </div>
+        <div class="carousel-card">
+          <div class="carousel-image">
+              <img src="weekly-flyer/tajweed.JPG" class="carousel-thumb" alt="">
+          </div>
+        </div>
+          <div class="carousel-card">
+            <div class="carousel-image">
+                <img src="weekly-flyer/FNL.JPG" class="carousel-thumb" alt="">
+            </div>
+        </div>
+        <div class="carousel-card">
+          <div class="carousel-image">
+              <img src="weekly-flyer/maryam.JPG" class="carousel-thumb" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+      <div id="more">
+        <button class="btn-more">
+          <a href="/weeklyEvents" class="button style3 large">More...</a>
+        </button>
+        
+      </div>
+	</section> 
+
+
+  <section id="main" class="wrapper style2">
+    <div class="title"><a href="/weeklyEvents">Weekly Events</a></div>
+
+    <section class="container"> 
+      <button class="pre-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="weekly-flyer/arrow.png" alt=""></button>
+      <div class="carousel-container">
+          <% for(let i=0; i < 6; i++) {%>
+            <% if ((event[i].weekly === true))  {%> 
+            <div class="carousel-card">
+              <div class="carousel-image">
+                <!-- <a href="/event/<%= event[i]._id%>"> -->
+                  <img src="<%= event[i].image%>" class="carousel-thumb" alt="">
+                <!-- </a>       -->
+              </div>    
+            <% } %>
+          <% } %>
+          </div>
+      </div>
+    </section>
+
+    <div id="more">
+      <button class="btn-more">
+        <a href="/weeklyEvents" class="button style3 large">More...</a>
+      </button>
+    </div>
+	</section> 
+
+<script src="/js/carousel.js"></script>
+</body>
+</html>

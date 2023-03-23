@@ -1,6 +1,5 @@
 const cloudinary = require("../middleware/cloudinary");
 const Event =  require('../models/Event')
-// const Comment =  require('../models/Comment')
 
 module.exports = {
     getProfile: async (req, res) => {

@@ -1,0 +1,258 @@
+body, html {
+  height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/image/banner5.png");
+
+/* Set a specific height */
+height: 40%;
+
+/* Position and center the image to scale nicely on all screens */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-weight: 900;
+text-transform: uppercase;
+color: #fff;
+font-size: 1em;
+letter-spacing: 0.25em;
+}
+
+a:hover{
+  text-decoration: none;
+  /* color: #fff; */
+
+}
+
+.homeTitle a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.wrapper {
+  position: relative;
+  /* padding: 6em 0 9em 0; */
+  padding-top: 3em;
+
+}
+
+  .wrapper .title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    font-size: 0.9em;
+    width: 25em;
+    height: 3.25em;
+    top: -3.25em;
+    line-height: 3.25em;
+    margin-bottom: -3.25em;
+    margin-left: -12.5em;
+    padding-top: 0.5em;
+  }
+
+.wrapper.style2 {
+  background: #fff;
+}
+
+
+/* .wrapper.style{ 
+background: #282b34 
+} */
+
+  .wrapper.style2 .title {
+    background: #fff;
+    color: #484d55;
+  }
+
+  .title a{
+    color:rgba(0, 0, 0, 0.5);  
+  /* color: white; */
+  }
+
+
+/* Carousel */
+.container {
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px; */
+}
+
+.carousel-container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* .carousel-container::-webkit-scrollbar {
+  display: none;
+} */
+
+.carousel-card {
+  flex: 0 0 auto;
+  display: flex;
+  /* width: 350px; */
+  height: 400px;
+}
+
+.carousel-image {
+  position: relative;
+  width: 100%;
+  /* height: 350px; */
+  overflow: hidden;
+    margin-right: 40px;
+
+}
+
+.carousel-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.collection-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.collection {
+  position: relative;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+
+
+#more {
+  margin-top: 0;
+  padding-bottom: 8em;
+  text-align: center;
+}
+
+.btn-more{
+  /* background: #2f333b;
+  color: #fff;
+  padding: 10px; */
+  /* font-size: 16px; */
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  display: inline-block;
+  background: #2f333b;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  border-radius: 0.35em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 0 2.25em 0 2.25em;
+  font-size: 0.9em;
+  min-width: 12em;
+  height: 4em;
+  line-height: 4em;
+}
+
+.btn-more a{
+  text-decoration: none;
+  font-family: Roboto;
+  color: #fff;
+  font-size: 1em;
+
+}
+
+.iftar{ 
+  color: white;
+}
+
+#footer {
+  background: #282b34;
+  color: #eee;
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 6em;
+}
+
+.wrapper.style .title {
+  background: #282b34;
+  color: #fff;
+}
+.title1 a{
+color: white;
+}
