@@ -17,7 +17,11 @@ const EventSchema = new mongoose.Schema({
       },
       weekly:{
         type: Boolean,
-        require: true
+        require: true,
+      },
+      iftar:{
+        type: Boolean,
+        require: true,
       },
       dayOfWeek: {
         type: String,

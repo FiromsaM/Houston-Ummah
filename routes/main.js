@@ -6,10 +6,10 @@ const eventControllers = require('../controllers/event')
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 router.get('/', homeController.getHome)
-router.get('/home', homeController.getHome1)
 
 router.get('/profile', ensureAuth, eventControllers.getProfile)
 router.get('/feeds', eventControllers.getFeed)
+router.get('/iftar', eventControllers.getIftar)
 router.get('/weeklyevents', eventControllers.getWeeklyEvent)
 router.get('/about', homeController.getAbout)
 

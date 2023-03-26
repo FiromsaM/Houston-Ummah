@@ -18,6 +18,14 @@ module.exports = {
             console.log(error)
         }
     },
+    getIftar: async (req, res) => {
+        try {
+            const event = await Event.find().sort({ createdAt: "desc" }).lean();
+            res.render('iftar.ejs', {event: event, user: req.user})
+        } catch (error) {
+            console.log(error)
+        }
+    },
     getEvent: async (req, res) => {
         try {
             const event = await Event.findById(req.params.id)
@@ -47,6 +55,7 @@ module.exports = {
                 cloudinaryId: result.public_id,
                 caption: req.body.caption,
                 weekly: req.body.weekly,
+                iftar: req.body.iftar,
                 dayOfWeek: req.body.dayOfWeek,
                 date: req.body.date,
                 user: req.user.id,

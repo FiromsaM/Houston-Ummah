@@ -15,31 +15,6 @@
 	<body>
  
 <!-- Layout -->
-  <!-- <section class="layout">
-    <div class="userEvents">
-      <div class="event">                      
-      <img class="flyer" src="<%= event.image%>" alt="Album"/>
-      </div>
-    </div>
-    <div class="info">
-      <div class="nameBorder">
-        <h1 class="name"><%= event.userName%></h1>
-      </div>
-      <div class="captionBorder">
-        <p><%= event.caption %></p>
-      </div>
-      <div class="deleteBorder">
-        <%if(event.user == user.id){ %>
-        <form action="/event/deleteEvent/<%= event.id %>?_method=DELETE" method="POST">
-          <button class="deleteBtn fa-solid fa-trash-can"></button>
-        </form>
-        <%}%>
-      </div>
-    </div>
-
-  
-  </section> -->
-  
   <div class="coupon">
     <div>
       <div class="container">
@@ -63,34 +38,7 @@
         <%}%>
       </div>
     </div>
-    
   </div>
-
-
-  <!-- <section class="layout">
-    <div class="nameBorder">
-      <h1 class="name"><%= event.userName%></h1>
-    </div>
-    <div class="userEvents">
-      <div class="event">                      
-      <img class="flyer" src="<%= event.image%>" alt="eventflyer"/>
-      </div>
-    </div>
-    <div class="info">
-      <div class="captionBorder">
-        <p><%= event.caption %></p>
-      </div>
-      <div class="deleteBorder">
-        <%if(event.user == user.id){ %>
-        <form action="/event/deleteEvent/<%= event.id %>?_method=DELETE" method="POST">
-          <button class="deleteBtn fa-solid fa-trash-can"></button>
-        </form>
-        <%}%>
-      </div>
-    </div> -->
-
-  
-  </section>
   
   <!-- Scripts -->
   <script src="https://kit.fontawesome.com/53c992d21c.js" crossorigin="anonymous"></script>
