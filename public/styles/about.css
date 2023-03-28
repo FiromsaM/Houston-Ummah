@@ -2,9 +2,10 @@
 
 /* Page Wrapper */
 
-body{
-  /* background-color: gray; */
-  font-family: Roboto, sans-serif, Arial, Helvetica;
+.body{
+  background-color: #ECF1F1;
+  /* font-family: Roboto, sans-serif, Arial, Helvetica; */
+  font-family: Source Sans Pro, sans-serif, Arial, Helvetica; ;
 }
 
 .about{
@@ -12,6 +13,7 @@ body{
   margin-bottom: .75em;
   border-bottom: 1px solid;
   padding: 14px 40px;
+  text-align: center;
   
 }
 
@@ -24,13 +26,16 @@ body{
   margin-bottom: .75em;
   border-bottom: 1px solid;
   padding: 14px 40px;
-  
+  text-align: center;
+
 }
 
 p{
   font-size: 1.2rem;
+  color: #24242488;
+  
 }
 .welcome{
-  font-size: 1.2rem;
-  line-height: 20px;
+  font-size: 1.6rem;
+  color: black;
 }
