@@ -3,6 +3,31 @@ body{
   font-family: Roboto, sans-serif, Arial, Helvetica;
 }
 
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #ff9800;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+#closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+#closebtn:hover {
+  color: black;
+}
+
 .container{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 0 20px;
@@ -26,7 +51,7 @@ body{
   text-align: center;
   margin: auto;
 }
-
+ 
 .row-event{
   display: flex;
   flex-wrap: wrap;
