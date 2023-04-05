@@ -10,18 +10,18 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const eventRoutes = require("./routes/events");
-const helmet = require('helmet');
-app.use(helmet());
+// const helmet = require('helmet');
+// app.use(helmet());
 
-app.use((req, res, next) => {
-  if (req.secure) {
-    // request was via https, so do no special handling
-    next();
-  } else {
-    // request was via http, so redirect to https
-    res.redirect(301, 'https://' + req.headers.host + req.url);
-  }
-});
+// app.use((req, res, next) => {
+//   if (req.secure) {
+//     request was via https, so do no special handling
+//     next();
+//   } else {
+//     request was via http, so redirect to https
+//     res.redirect(301, 'https://' + req.headers.host + req.url);
+//   }
+// });
 
 
 //Use .env file in config folder
