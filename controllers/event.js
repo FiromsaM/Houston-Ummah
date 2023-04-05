@@ -12,7 +12,7 @@ module.exports = {
     },
     getFeed: async (req, res) => {
         try {
-            const event = await Event.find().sort({ createdAt: "desc" }).lean();
+            const event = await Event.find().sort({ date: 1 }).lean();
             res.render('feed.ejs', {event: event, user: req.user})
         } catch (error) {
             console.log(error)

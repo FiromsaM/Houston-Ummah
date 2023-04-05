@@ -13,11 +13,14 @@
 <body>
     <div class="userEvents">
       <% for(let i=0; i<event.length; i++) {%>
+        <% if (event[i].date >= new Date() ) {%> 
         <div class="event">                      
               <img class="flyer" src="<%= event[i].image%>" >
             </a>
         </div>
       <% } %>
+    <% } %>
+
     </div>
 <%- include('partials/footer') -%>
 </body>
