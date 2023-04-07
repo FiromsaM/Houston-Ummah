@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston Ummah - Feeds</title>
+  <link rel="stylesheet" href="/styles/calendar.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <%- include('partials/header') -%>
+</head>
+<body>
+
+    <div class="eventContainer">
+      <% let previousDay = moment().subtract(1, 'days'); %>
+      <% let sameDate  %>
+      <% for(let i=0; i<event.length; i++) {%>
+        <% let dateOfEvent = moment(event[i].date).tz('GMT') %>
+        <% if (dateOfEvent >= previousDay) {%> 
+          <% dateOfEvent = dateOfEvent.format('ddd MMMM Do'); %>
+          <% if (dateOfEvent == sameDate) { %> 
+              <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>
+          <% } else { %>
+              <div class="date"><%= dateOfEvent %> </div>
+                <div class="event"><img class="flyer" src="<%= event[i].image%>"></div> 
+              <% sameDate = dateOfEvent %>
+          <% } %>       
+      <% } %>
+      <% } %>
+    </div>
+
+<%- include('partials/footer') -%>
+</body>
+</html>

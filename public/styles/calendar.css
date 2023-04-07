@@ -1,0 +1,56 @@
+body{
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif, Arial, Helvetica;
+}
+
+ .eventContainer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  background-color: #e8e8e8;
+ }
+ 
+ .date{
+  display: block;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 -5px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: #373D49F9;
+ }
+ .event{
+  width: 25%;
+ }
+
+ .flyer{
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  
+  .event{
+    width: 33.333%;		
+  }
+} 
+
+@media screen and (max-width: 600px) {
+
+  .event{
+    width: 50%;		
+  }
+}
+@media screen and (max-width: 500px) {
+    .event{
+      width: 100%;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+} 

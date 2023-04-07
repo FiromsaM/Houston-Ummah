@@ -1,11 +1,12 @@
 const cloudinary = require("../middleware/cloudinary");
 const Event =  require('../models/Event')
+let moment = require('moment-timezone');
 
 module.exports = {
     getProfile: async (req, res) => {
         try {
             const event = await Event.find({user: req.user.id}).sort({ createdAt: "desc" }).lean();
-            res.render('profile.ejs', {event: event, user: req.user })
+            res.render('profile.ejs', {event: event, user: req.user, moment: moment })
         } catch (error) {
             console.log(error)
         }
@@ -14,6 +15,14 @@ module.exports = {
         try {
             const event = await Event.find().sort({ date: 1 }).lean();
             res.render('feed.ejs', {event: event, user: req.user})
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    getCalendar: async (req, res) => {
+        try {
+            const event = await Event.find().sort({ date: 1 }).lean();
+            res.render('calendar.ejs', {event: event, user: req.user, moment})
         } catch (error) {
             console.log(error)
         }

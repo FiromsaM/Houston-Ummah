@@ -22,44 +22,12 @@ body{
   width: 100%;
 }
 
-    /* .userEvents{
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap; 
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    
-     }
-    
-     .event{
-      width: 25%;		
-      margin-bottom: 3px;
-      vertical-align: top;
-    }
-    
-     .flyer{
-      max-width: 100%;
-      object-fit: cover;
-      height: fit-content;
-      vertical-align: top;
-    } */
-
 
     @media screen and (max-width: 800px) {
   
       .event{
         width: 33.333%;		
       }
-      
-       /* .flyer{
-        max-width: 100%;
-        object-fit: cover;
-        height: fit-content;
-        vertical-align: top;
-      } */
     } 
 
     @media screen and (max-width: 600px) {
@@ -67,13 +35,6 @@ body{
       .event{
         width: 50%;		
       }
-      
-       /* .flyer{
-        max-width: 100%;
-        object-fit: cover;
-        height: fit-content;
-        vertical-align: top;
-      } */
     }
     @media screen and (max-width: 500px) {
       .userEvents{
@@ -86,12 +47,5 @@ body{
           margin-left: 1px;
           margin-right: 1px;
         }
-      
-       /* .flyer{
-        max-width: 100%;
-        object-fit: cover;
-        height: fit-content;
-        vertical-align: top;
-      } */
     } 
 
