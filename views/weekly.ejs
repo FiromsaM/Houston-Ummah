@@ -1,4 +1,147 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston Ummah - Feeds</title>
+  <link rel="stylesheet" href="/styles/calendar.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <%- include('partials/header') -%>
+</head>
+<body>
+
+  <div class="alert">
+    <span id="closebtn">&times;</span>
+    Ramadan may affect some of these events.
+  </div>
+
+  <div class="eventContainer">
+    <div class="date">Monday </div>
+    <% count = 0 %>
+
+    <% for(let i=0; i<event.length; i++) {%>
+      <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "monday"))  {%> 
+      <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>    
+      <% count = 1 %>        
+    <% } %>
+    <% } %>
+    <% if(count == 0){ %>
+      <div>
+      <h2 class="dayOfWeek">Nothing yet...</h2>
+      </div>      
+    <% } %>
+  </div>
+
+    <div class="eventContainer">
+      <div class="date">Tuesday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "tuesday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+
+    <div class="eventContainer">
+      <div class="date">Wednesday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "wednesday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+
+    <div class="eventContainer">
+      <div class="date">Thursday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "thursday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+
+    <div class="eventContainer">
+      <div class="date">Friday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "friday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+
+    <div class="eventContainer">
+      <div class="date">Saturday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "saturday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+
+    <div class="eventContainer">
+      <div class="date">Sunday </div>
+      <% count = 0 %>
+
+      <% for(let i=0; i<event.length; i++) {%>
+        <% if ((event[i].weekly === true) && (event[i].dayOfWeek === "sunday"))  {%> 
+        <div class="event"><img class="flyer" src="<%= event[i].image%>"></div>       
+        <% count = 1 %>        
+        <% } %>
+      <% } %>
+      <% if(count == 0){ %>
+        <div>
+        <h2 class="dayOfWeek">Nothing yet...</h2>
+        </div>      
+      <% } %>
+    </div>
+<%- include('partials/footer') -%>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +153,6 @@
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
   <%- include('partials/header') -%>
- 
 </head>
 <body>
   <div class="alert">
@@ -189,4 +331,4 @@
 
 <%- include('partials/footer') -%>
 </body>
-</html>
+</html> -->
