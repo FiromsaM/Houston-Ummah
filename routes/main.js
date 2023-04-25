@@ -11,7 +11,6 @@ router.get('/profile', ensureAuth, eventControllers.getProfile)
 router.get('/feeds', eventControllers.getFeed)
 router.get('/calendar', eventControllers.getCalendar)
 
-router.get('/iftar', eventControllers.getIftar)
 router.get('/weeklyevents', eventControllers.getWeeklyEvent)
 router.get('/about', homeController.getAbout)
 

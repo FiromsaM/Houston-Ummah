@@ -27,14 +27,6 @@ module.exports = {
             console.log(error)
         }
     },
-    getIftar: async (req, res) => {
-        try {
-            const event = await Event.find().sort({ createdAt: "desc" }).lean();
-            res.render('iftar.ejs', {event: event, user: req.user})
-        } catch (error) {
-            console.log(error)
-        }
-    },
     getEvent: async (req, res) => {
         try {
             const event = await Event.findById(req.params.id)
